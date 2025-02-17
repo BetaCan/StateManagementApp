@@ -13,11 +13,11 @@ import com.example.statemanagementapp.ui.theme.StateManagementAppTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-// Enable edge-to-edge content
+        // Enable edge-to-edge content
         enableEdgeToEdge()
         setContent {
             StateManagementAppTheme {
-// Scaffold layout to structure the app layout
+                // Scaffold layout to structure the app layout
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     CounterApp(modifier = Modifier.padding(innerPadding))
                 }
@@ -34,17 +34,17 @@ fun CounterApp(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center,
         modifier = modifier.fillMaxSize()
     ) {
-// Display the current counter value
+        // Display the current counter value
         Text(
             text = "Counter: $counter",
             style = MaterialTheme.typography.headlineMedium,
             modifier = Modifier.padding(16.dp)
         )
-// Button to increment the counter
+        // Button to increment the counter
         Button(onClick = { counter++ }, modifier = Modifier.padding(8.dp)) {
             Text("Increment")
         }
-// Button to decrement the counter
+        // Button to decrement the counter
         Button(onClick = { counter-- }, modifier = Modifier.padding(8.dp)) {
             Text("Decrement")
         }
